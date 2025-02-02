@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
@@ -22,60 +28,94 @@
         font-family: "ADLaM Display", serif;
       }
     </style>
+    <style>
+      .font-sora {
+        font-family: "Sora", serif;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#F9DF8A",
+              "pet-primary": "#F9DF8A",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
-  <body class="font-adlam-display">
-    <header></header>
-    <nav>
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              <li><a>Item 1</a></li>
-              
-              <li><a>Item 3</a></li>
+  <body>
+    <header class="font-sora">
+      <nav class="bg-orange-50 w-full">
+        <div class="navbar md:container md:mx-auto w-full">
+
+          <div class="navbar-start">
+            <i class="fa-solid text-yellow-400 fa-2x fa-paw"></i>
+            <a class="btn btn-ghost text-xl hidden lg:flex">
+                Browse<span class="text-yellow-400">4</span>Pets
+              </a>
+          </div>
+
+
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Find a pet</a></li>
+              <li><a>Breeds</a></li>
+              <li><a>Contact us</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">Browse<span>4</span>Pets</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
-        <div class="navbar-end">
-          <a class="btn">Button</a>
-        </div>
-      </div>
-    </nav>
 
-    <main></main>
 
-    <footer></footer>
+          <div class="navbar-end gap-4">
+
+            <div class="dropdown lg:hidden">
+              <div tabindex="0" role="button" class="btn btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Find a pet</a></li>
+                <li><a>Breeds</a></li>
+                <li><a>Contact us</a></li>
+              </ul>
+            </div>
+            <div class="hidden lg:flex gap-4">
+              <i class="fa-regular fa-bell"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <button class="btn btn-outline btn-warning">
+                <span class="text-black">Login</span>
+              </button>
+              <button class="btn btn-warning">Register</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="font-adlam-display">
+        
+    </main>
+
+    <footer class="font-sora"></footer>
   </body>
 </html>
